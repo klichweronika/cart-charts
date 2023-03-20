@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+  --text: rgba(255, 255, 255);
+  --light-blue: rgb(40,119,246);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	height: -webkit-fill-available;
+  
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: -webkit-fill-available;
+  background-color: rgb(245, 240, 240);
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+
+

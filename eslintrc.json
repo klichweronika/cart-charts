@@ -1,0 +1,23 @@
+{
+    "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  
+    "rules": {
+      "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-explicit-any": "error",
+      "@next/next/no-document-import-in-page": "off",
+      "max-len": [
+        "error",
+        {
+          "code": 120
+        }
+      ],
+      "import/order": [
+        "error",
+        {
+          "groups": ["external", "index", "sibling", "parent", "internal", "object", "type"]
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,41 @@
+.cartsTable {
+    margin: 5rem;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #cdbdc3;
+    border-radius: 5px;
+    
+    thead {
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      background-color: #cdbdc3;
+  
+      tr th {
+        padding: 20px;
+        
+        
+      }
+    }
+  
+    tr td {
+      padding: 20px;
+      border-bottom: 1px solid #cdbdc3;
+    }
+  
+    tbody tr {
+      background-color: white;
+      transition: 0.5s;
+      cursor: pointer;
+      
+      &:hover {
+        opacity: 0.5;
+        scale: 1;
+      }
+    }
+  }
