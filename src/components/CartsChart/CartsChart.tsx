@@ -1,21 +1,8 @@
 import { useContext } from 'react'
 import Context from '../../context/Context'
 import { Line } from 'react-chartjs-2'
-import {
-    Chart as ChartJS,
-    LineElement,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-} from 'chart.js'
 import 'chart.js/auto';
 
-ChartJS.register(
-    LineElement,
-    CategoryScale,
-    LinearScale,
-    PointElement
-)
 
 export default function CartsChart() {
 

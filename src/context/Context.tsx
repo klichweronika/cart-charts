@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Cart } from "../common/types/cartTypes";
+import { Cart } from "../common/types/CartTypes";
 
 type CartContextType = {
     selectedCart: Cart | null;
