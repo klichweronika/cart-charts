@@ -4,16 +4,16 @@ import Context from '../../context/Context';
 import Graph from '../CartsChart/CartsChart';
 
 export default function CartDetails() {
-  const { selectedCart, setSelectedCart, cartInfoVisible, setCartInfoVisible, carts, setCarts } = useContext(Context);
+  const { selectedCart, setSelectedCart, cartDetailsOpen, setCartDetailsOpen, carts, setCarts } = useContext(Context);
 
   const handleRemove = () => {
-    setCartInfoVisible(!cartInfoVisible);
+    setCartDetailsOpen(!cartDetailsOpen);
     setCarts(carts.filter((cart) => cart.id !== selectedCart?.id));
     setSelectedCart(null);
   };
 
   const handleCartInfo = () => {
-    setCartInfoVisible(!cartInfoVisible);
+    setCartDetailsOpen(!cartDetailsOpen);
     setSelectedCart(null);
   };
 

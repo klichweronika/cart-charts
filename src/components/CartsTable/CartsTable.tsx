@@ -10,8 +10,8 @@
       setSelectedCart,
       carts,
       setCarts,
-      cartInfoVisible,
-      setCartInfoVisible,
+      cartDetailsOpen,
+      setCartDetailsOpen,
     } = useContext(Context);
   
     useEffect(() => {
@@ -22,7 +22,7 @@
       }, [setCarts]);
   
       const handleCartClick = (cart: any) => {
-        setCartInfoVisible(true);
+        setCartDetailsOpen(true);
         setSelectedCart(cart);
       };
   
@@ -54,7 +54,7 @@
             </tbody>
           </table>
         </div>
-        {cartInfoVisible && <CartDetails />}
+        {cartDetailsOpen && <CartDetails />}
       </>
     );
   }

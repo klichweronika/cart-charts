@@ -1,6 +1,8 @@
+@import "../../styles/colors";
+
 .header {
 	display: flex;
-	margin: 3rem 8rem;
+	margin: 3rem;
 	place-content: center;
 	gap: 2rem;
 	align-items: center;
@@ -9,22 +11,22 @@
 		padding: 10px;
 		width: 60px;
 		border: none;
-		font-size: 20px;
-		box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+		box-shadow: $lighter-grey-shadow;
 		outline: none;
 		border-radius: 8px;
 	}
 
 	button {
-		background-color: #EA4C89;
+		background-color: $regular-pink-btn;
 		border-radius: 8px;
 		border-style: none;
-		padding: 14px;
+		padding: 11px;
 		cursor: pointer;
-		box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+		box-shadow: $lighter-grey-shadow;
+		transition: 0.5s;
 
 		&:hover {
-			background-color: #F082AC;
+			opacity: 0.5;
 		}
 	}
 }

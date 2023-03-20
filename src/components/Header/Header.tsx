@@ -4,27 +4,31 @@ import Context from '../../context/Context';
 import { API_BASE_URL } from '../../common/api/CartsApi';
 import { toastSuccess, toastError } from '../../components/Toast/Toast';
 
-const Header = () => {
+export default function Header () {
   const [value, setValue] = useState(1);
   const { carts, setCarts } = useContext(Context);
 
   const fetchData = async () => {
-    const response = await fetch(`${API_BASE_URL}/carts/${value}`);
-    if (!response.ok) {
-      throw new Error('Failed to fetch cart data');
+    try {
+      const response = await fetch(`${API_BASE_URL}/carts/${value}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch cart data');
+      }
+      const data = await response.json();
+      setCarts([...carts, data]);
+    } catch (error: any) {
+      toastError(error.message);
     }
-    const data = await response.json();
-    setCarts([...carts, data]);
   };
 
   const handleAddCart = async () => {
-    if (value > 20) {
-      toastError('Invalid ID');
+    if (value > 20 || value <= 0) {
+      toastError('Wrong value');
     } else if (!carts.some((cart) => cart.id === value)) {
       try {
         await fetchData();
         if (carts[carts.length - 1]) {
-          toastSuccess('Successfully added new cart!');
+          toastSuccess('Successfully added new cart');
         } else {
           toastError('Failed to fetch cart data');
         }
@@ -41,7 +45,7 @@ const Header = () => {
       <span>If your cart is not in the list, you can choose one from 1-20!</span>
       <div className={styles.header__selector}>
         <input
-        value={value}
+          value={value}
           type="number"
           inputMode="numeric"
           min="1"
@@ -54,5 +58,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

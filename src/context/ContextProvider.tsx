@@ -12,10 +12,10 @@ export default function ContextProvider({ children }: ContentProps) {
 
     const [carts, setCarts] = useState<Cart[]>([])
 
-    const [cartInfoVisible, setCartInfoVisible] = useState(false)
+    const [cartDetailsOpen, setCartDetailsOpen] = useState(false)
 
     return (
-        <Context.Provider value={{ selectedCart, setSelectedCart, carts, setCarts, cartInfoVisible, setCartInfoVisible }}>
+        <Context.Provider value={{ selectedCart, setSelectedCart, carts, setCarts, cartDetailsOpen, setCartDetailsOpen }}>
             {children}
         </Context.Provider>
     );
