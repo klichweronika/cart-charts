@@ -15,7 +15,7 @@ export default function Header () {
         throw new Error('Failed to fetch cart data');
       }
       const data = await response.json();
-      setCarts([...carts, data]);
+      setCarts([data, ...carts]);
     } catch (error: any) {
       toastError(error.message);
     }
