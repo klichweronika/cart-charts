@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cart } from "../common/types/CartTypes";
+import { Cart } from "../common/types/cartTypes";
 import Context from "./Context";
 
 type ContentProps = {
