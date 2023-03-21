@@ -4,5 +4,5 @@ Simple app written in React, TypeScript. To build based UI components I used SCS
 
 ## Build and run the projects
 
-> yarn install
-> yarn start
+1. yarn install
+2. yarn start
